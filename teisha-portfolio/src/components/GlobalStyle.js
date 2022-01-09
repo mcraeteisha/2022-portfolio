@@ -33,7 +33,7 @@ footer {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     font-family: 'Luam-Regular', Arial, sans-serif;
 }
 

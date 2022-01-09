@@ -6,8 +6,8 @@ function NavBar() {
     return (
         <>
         <NameIconContainer>
-            <h1>TEI</h1>
-            <h1>SHA.</h1>
+            <h2>TEI</h2>
+            <h2>SHA.</h2>
         </NameIconContainer>
         </>
     )
