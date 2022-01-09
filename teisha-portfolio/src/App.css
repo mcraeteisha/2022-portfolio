@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: "Luam-Light";
+  src: local("Luam-Light"),
+   url("./fonts/Luam-Light/Luam-Light.ttf") format("truetype");
+  font-weight: normal;
+  }
+
+@font-face {
+  font-family: "Luam-Regular";
+  src: local("Luam-Regular"),
+    url("./fonts/Luam-Regular/Luam-Regular.ttf") format("truetype");
+  font-weight: normal;
+  }  
