@@ -49,6 +49,7 @@ h3 {
 
 h4 {
     font-size: 2rem;
+    font-family: 'Luam-Regular', Arial, sans-serif;
 }
 
 span {
