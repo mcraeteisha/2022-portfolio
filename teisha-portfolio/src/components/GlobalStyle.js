@@ -63,6 +63,14 @@ span {
     color: var(--emphasis-color);
 }
 
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
 button {
 padding: 1rem 2rem;
 background-color: var(--emphasis-color);

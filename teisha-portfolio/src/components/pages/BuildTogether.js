@@ -13,7 +13,7 @@ function BuildTogether() {
             </HeadingDiv>
             <DescriptionDiv>
                 <Description>
-                    <p>Codedotlog is an app for developers to set learning goals and keep track of their progress towards completing their goals. Developers can log hours dedicated to their coding practice of a particular language or skill and monitor their progress.</p><br/>
+                    <p>Looking for a developer? Have a question? Just want to connect? Feel free to reach out!</p><br/>
                 </Description>
             </DescriptionDiv>
             <ButtonDiv>
@@ -54,6 +54,7 @@ const DescriptionDiv = Styled.div
 const ButtonDiv = Styled.div
 `
     padding-left: 5em;
+    padding-bottom: 2em;
 `
 
 const CtaButton = Styled.button
