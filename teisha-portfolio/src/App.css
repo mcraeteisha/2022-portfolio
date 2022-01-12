@@ -37,16 +37,3 @@
   }
 }
 
-@font-face {
-  font-family: "Luam-Light";
-  src: local("Luam_Light"),
-   url("./fonts/Luam-Light/Luam-Light.ttf") format("truetype");
-  font-weight: normal;
-  }
-
-@font-face {
-  font-family: "Luam-Regular";
-  src: local("Luam-Regular"),
-    url("./fonts/Luam-Regular/Luam-Regular.ttf") format("truetype");
-  font-weight: normal;
-  }  

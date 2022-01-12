@@ -10,12 +10,18 @@ const GlobalStyle = createGlobalStyle`
     --emphasis-color: #F6C453;
     //Pink
     --accent-color: #F8D2BE;
+    //White
+    --white: #FFFFFF;
   }
 
-* {
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
     margin: 0;
     padding 0;
-    box-sizing: border-box
+    box-sizing: inherit;
 }
 
 body {
@@ -49,7 +55,7 @@ h3 {
 
 h4 {
     font-size: 2rem;
-    font-family: 'Luam-Regular', Arial, sans-serif;
+    font-family: 'Luam-Light', Arial, sans-serif;
 }
 
 span {
@@ -58,19 +64,20 @@ span {
 
 button {
 padding: 1rem 2rem;
-background-color: var(--accent-color);
-color: var(--primary-color);
+background-color: var(--emphasis-color);
+color: var(--white);
 border: none;
-border-radius: 5px;
-font-size: 1rem;
+border-radius: 50px;
+font-family: 'Luam-Regular', Arial, sans-serif;
+font-size: 1.5em;
 font-weight: bold;
 text-decoration: none;
 cursor: pointer;
 text-transform: uppercase;
 transition: all 0.5s ease;
 &:hover{
-    background:var(--emphasis-color);
-    color: #ffffff;
+    background:var(--primary-color);
+    color: var(--accent-color);
 }
 
 `;

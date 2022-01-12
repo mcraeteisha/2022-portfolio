@@ -32,6 +32,7 @@ const LeadInContainer = Styled.div
  `
  padding-left: 5em;
  padding-top: 5em;
+ padding-right: 5em;
  `
 
 const LeadIn = Styled.h1
