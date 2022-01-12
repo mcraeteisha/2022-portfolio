@@ -65,6 +65,7 @@ const WorkHeaderDiv = Styled.div
 `
     padding-top: 10em;
     padding-left: 5em;
+    padding-bottom: 5em;
 `
 
 export default BioPage;
