@@ -44,8 +44,9 @@ h1 {
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-family: 'Luam-Regular', Arial, sans-serif;
+    letter-spacing: 0.15em;
 }
 
 h3 {

@@ -3,6 +3,7 @@ import LandingPage from './pages/LandingPage';
 import BioPage from './pages/BioPage';
 import WWMWork from './pages/WWMWork';
 import CodedotlogWork from './pages/CodedotlogWork';
+import BuildTogether from './pages/BuildTogether';
 
 function PortfolioContainer() {
     return(
@@ -11,6 +12,7 @@ function PortfolioContainer() {
             <BioPage />
             <WWMWork />
             <CodedotlogWork />
+            <BuildTogether />
         </>
     )
 };
