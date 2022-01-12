@@ -65,13 +65,13 @@ const ImageDiv = Styled.div
 const ATKImage = Styled.img
 `
     border-radius: 50px;
-    height: 50vh;
+    height: 55vh;
 `
 
 const MultiEmailImage = Styled.img
 `
     border-radius: 50px;
-    height: 50vh;
+    height: 55vh;
 `
 
 export default WWMWork;
