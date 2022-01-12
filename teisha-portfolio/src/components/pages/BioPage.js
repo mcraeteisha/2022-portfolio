@@ -19,9 +19,12 @@ function BioPage() {
                 </Bio>     
             </BioContainer>
             <ButtonDiv>
-                <a href="mailto: mcraeteisha@gmail.com"><WorkButton>Let's Work Together</WorkButton></a>
+                <a href="mailto: mcraeteisha@gmail.com"><button>Let's Work Together</button></a>
             </ButtonDiv>    
-        </div>    
+        </div> 
+        <WorkHeaderDiv>
+            <h1>What I've Been Working On</h1>
+        </WorkHeaderDiv>   
         </>
     )
 };
@@ -29,7 +32,7 @@ function BioPage() {
 const BioContainer = Styled.div
  `
     padding-left: 5em;
-    padding-top: 5em;
+    padding-top: 8em;
  `
 
 const Bio = Styled.h4
@@ -40,7 +43,7 @@ const Bio = Styled.h4
 const HeadShotContainer = Styled.div
 `
     float: right;
-    padding-top: 5em;
+    padding-top: 6.5em;
     padding-left: 5em;
     width: 50%;
     display: flex;
@@ -58,8 +61,10 @@ const ButtonDiv = Styled.div
     padding-left: 5em;
 `
 
-const WorkButton = Styled.button
+const WorkHeaderDiv = Styled.div
 `
+    padding-top: 10em;
+    padding-left: 5em;
 `
 
 export default BioPage;
