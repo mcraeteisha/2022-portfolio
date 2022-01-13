@@ -31,7 +31,7 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    font-family: 'Luam-Light', Arial, sans-serif;
+    font-family: 'Luam-Regular', Arial, sans-serif;
 }
 
 footer {
@@ -56,7 +56,7 @@ h3 {
 
 h4 {
     font-size: 2rem;
-    font-family: 'Luam-Light', Arial, sans-serif;
+    font-family: 'Luam-Regular', Arial, sans-serif;
 }
 
 span {
