@@ -36,8 +36,13 @@ const NavStyle = Styled.nav
     display: flex;
     top: 0;
     &.active {
-        background: var(--primary-color);
+        background: rgba(1,51,40, 0.95);
         color: var(--accent-color);
+        -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+
+        transparency: 50%;
     }
 `
 
