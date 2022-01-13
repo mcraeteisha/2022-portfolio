@@ -14,7 +14,7 @@ function codedotlogWork() {
            <DescriptionDiv>
             <CodedotlogDescription>
                 <p>Codedotlog is an app for developers to set learning goals and keep track of their progress towards completing their goals. Developers can log hours dedicated to their coding practice of a particular language or skill and monitor their progress.</p><br/>
-                <p>Built using XYZ. My contributions...</p><br/>
+                <p>Built using React, MongoDB, GraphQL with a Node.js and Express.js server, and Styled Components. My contributions were building out Front-End components and using DayJS to create a Weekly Report modal that presents to users once a week, displaying their goal progress.</p><br/>
             </CodedotlogDescription>
                 <CodedotlogLink href="http://codedotlog.herokuapp.com/" target="_blank" rel="noreferrer noopener"><h3>codedotlog.herokuapp.com →</h3></CodedotlogLink>
             </DescriptionDiv>

@@ -13,8 +13,8 @@ function WWMWork() {
             </HeadingDiv>
            <DescriptionDiv>
             <WWMDescription>
-                <p>I'm a curious, detail-oriented, and thoughtful tinkerer with a passion for coding. Building beautiful websites with sleek, responsive designs is what fuels me.</p><br/>
-                <p>In July 2021, I graduated from the UNC-Chapel Hill Full Stack Coding Bootcamp with an A average. During the program, I collaborated with my classmates to build full-stack web applications using HTML, CSS, JavaScript, React, and more.</p><br/>
+                <p>My current full-time role, where I manage internal QA testing processes; collaborate with developers and our VP of Product to reproduce, document, and test customer-reported bugs, and new system features; and communicate technical information to a non-technical audience via release notes.</p><br/>
+                <p>In my 4+ years at Written Word, I've had the opportunity to utilize my coding skills to update landing pages and sign-up forms. I've also updated code for 50+ branded email templates using HTML, CSS, and Zephyr with a goal of increasing reader engagement by 2% each month.</p><br/>
             </WWMDescription>
                 <WWMLink href="https://www.writtenwordmedia.com/" target="_blank" rel="noreferrer noopener"><h3>writtenwordmedia.com →</h3></WWMLink>
             </DescriptionDiv>
