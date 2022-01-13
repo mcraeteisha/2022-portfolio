@@ -11,7 +11,7 @@ function LandingPage() {
             <NavBar />
             <LeadInContainer>
                 <LeadIn>
-                    <h1>I'm Teisha McRae—software developer, QA specialist, & curious tinkerer.</h1>
+                    <h1>I'm Teisha McRae—software developer, QA specialist, & thoughtful tinkerer.</h1>
                 </LeadIn>
             </LeadInContainer>
             <IconsContainer>

@@ -85,7 +85,7 @@ cursor: pointer;
 text-transform: uppercase;
 transition: all 0.5s ease;
 &:hover{
-    background:var(--primary-color);
+    background: var(--primary-color);
     color: var(--accent-color);
 }
 
