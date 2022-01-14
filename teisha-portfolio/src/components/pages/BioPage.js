@@ -12,6 +12,7 @@ function BioPage() {
             </HeadShotContainer> 
             <BioContainer>
                 <Bio>
+                    <Line></Line>
                     <p>I’m a curious, detail-oriented, and resourceful problem-solver with a passion for coding. </p><br/>
                     <p>In 2015, I graduated from The University of North Carolina at Chapel Hill with a B.A. in English Literature and Communication Studies. Not long after I tossed my graduation cap, I joined the team at Written Word Media where I merged my love of books and helping people share their stories. I signed on for a Content Specialist role, but I’ve worn many hats at WWM, from email marketing and operations to product and QA. I’ve found that my technical hat fit the best. The skills I’ve honed and projects I’ve undertook at WWM have laid the foundation for my journey into tech. </p><br/>
                     <p>In July 2021, I graduated from the UNC-Chapel Hill Full Stack Coding Bootcamp with an A average. During the program, I collaborated with classmates to build beautiful full-stack web applications. It was during this time that my desire to leverage tech to solve real-world problems and make an impact was realized and cemented.</p> <br/>
@@ -45,6 +46,16 @@ const Bio = Styled.h4
 `
     line-height: 1.25;
 ` 
+
+const Line = Styled.hr
+`
+    margin-bottom: 1em;
+    height: 0.25em;
+    width: 10%;
+    border-width: 0;
+    color: var(--accent-color);
+    background-color: var(--accent-color);
+`
 
 const HeadShotContainer = Styled.div
 `

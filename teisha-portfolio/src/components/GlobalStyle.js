@@ -31,7 +31,7 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    font-family: 'Luam-Regular', Arial, sans-serif;
+    font-family: futura-pt, sans-serif;
 }
 
 footer {
@@ -39,24 +39,30 @@ footer {
 }
 
 h1 {
-    font-size: 5rem;
-    font-family: 'Luam-Regular', Arial, sans-serif;
+    font-size: 4rem;
+    font-family: gopher, sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 h2 {
-    font-size: 3.5rem;
-    font-family: 'Luam-Regular', Arial, sans-serif;
-    letter-spacing: 0.15em;
+    font-size: 3rem;
+    font-family: gopher, sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 h3 {
     font-size: 2rem;
-    font-family: 'Luam-Regular', Arial, sans-serif;
+    font-family: gopher, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h4 {
-    font-size: 2rem;
-    font-family: 'Luam-Regular', Arial, sans-serif;
+    font-size: 1.6rem;
+    font-family: 'Work Sans', sans-serif;    
+    font-style: normal;
 }
 
 span {
@@ -77,9 +83,10 @@ background-color: var(--emphasis-color);
 color: var(--white);
 border: none;
 border-radius: 50px;
-font-family: 'Luam-Regular', Arial, sans-serif;
+font-family: gopher, sans-serif;
+font-weight: 700;
+font-style: normal;
 font-size: 1.5em;
-font-weight: bold;
 text-decoration: none;
 cursor: pointer;
 text-transform: uppercase;
