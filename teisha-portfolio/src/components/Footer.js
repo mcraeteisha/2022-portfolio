@@ -29,16 +29,17 @@ const SectionContainer = Styled.div
     margin-bottom: 1em;
     display: flex;
     justify-content: space-around;
+    font-size: .5rem;
 `
 
 const NameIconContainer = Styled.div
 `
-    line-height: 2.5em;
+    line-height: 5.75em;
+    
 `
 
 const MadeWithContainer = Styled.div
 `
-    text-transform: uppercase;
     display: flex;
     align-items: flex-end;
 `
