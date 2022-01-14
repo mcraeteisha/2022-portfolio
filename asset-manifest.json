@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/2022-portfolio/static/js/main.d2c86a26.js",
-    "static/media/teisha_headshot.jpg": "/2022-portfolio/static/media/teisha_headshot.358ae6e0c78c75893a59.jpg",
-    "static/media/wwm_email_templates_green.png": "/2022-portfolio/static/media/wwm_email_templates_green.6c3c1b0cd3abf6a24eb0.png",
-    "static/media/wwm_email_templates_yellow.png": "/2022-portfolio/static/media/wwm_email_templates_yellow.329671dc1faee133e8b3.png",
-    "static/media/codedotlog_beige.png": "/2022-portfolio/static/media/codedotlog_beige.86a9b6821d572c10100d.png",
-    "static/media/codedotlog_pink.png": "/2022-portfolio/static/media/codedotlog_pink.1c13fb5fab64ec66022d.png",
-    "static/media/TeishaMcRae_Resume.pdf": "/2022-portfolio/static/media/TeishaMcRae_Resume.e81c3ce59fc0f4f3e8ce.pdf",
-    "index.html": "/2022-portfolio/index.html",
-    "main.d2c86a26.js.map": "/2022-portfolio/static/js/main.d2c86a26.js.map"
+    "main.js": "/static/js/main.c1b5f225.js",
+    "static/media/teisha_headshot.jpg": "/static/media/teisha_headshot.358ae6e0c78c75893a59.jpg",
+    "static/media/wwm_email_templates_green.png": "/static/media/wwm_email_templates_green.6c3c1b0cd3abf6a24eb0.png",
+    "static/media/wwm_email_templates_yellow.png": "/static/media/wwm_email_templates_yellow.329671dc1faee133e8b3.png",
+    "static/media/codedotlog_beige.png": "/static/media/codedotlog_beige.86a9b6821d572c10100d.png",
+    "static/media/codedotlog_pink.png": "/static/media/codedotlog_pink.1c13fb5fab64ec66022d.png",
+    "static/media/TeishaMcRae_Resume.pdf": "/static/media/TeishaMcRae_Resume.e81c3ce59fc0f4f3e8ce.pdf",
+    "index.html": "/index.html",
+    "main.c1b5f225.js.map": "/static/js/main.c1b5f225.js.map"
   },
   "entrypoints": [
-    "static/js/main.d2c86a26.js"
+    "static/js/main.c1b5f225.js"
   ]
 }
