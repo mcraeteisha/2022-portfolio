@@ -1,27 +1,3 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  scroll-behavior: smooth;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-@font-face {
-  font-family: "Luam-Light";
-  src: local("Luam-Light"),
-   url("./fonts/Luam-Light/Luam-Light.ttf") format("truetype");
-  font-weight: normal;
-  }
-
-@font-face {
-  font-family: "Luam-Regular";
-  src: local("Luam-Regular"),
-    url("./fonts/Luam-Regular/Luam-Regular.ttf") format("truetype");
-  font-weight: normal;
-  }  
