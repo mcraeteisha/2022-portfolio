@@ -1,6 +1,7 @@
 import Styled, { css } from "styled-components";
 
 const base = css`
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
@@ -12,11 +13,29 @@ const base = css`
   letter-spacing: 0.01em;
   text-decoration: none;
   border: 1px solid transparent;
+  overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+    transform: skewX(-20deg);
+    transition: left 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
 
   &:hover {
     transform: translateY(-2px);
     text-decoration: none;
+  }
+
+  &:hover::after {
+    left: 125%;
   }
 `;
 

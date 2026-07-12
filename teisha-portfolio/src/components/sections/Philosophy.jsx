@@ -5,7 +5,7 @@ import Teisha from "../../images/Teisha_McRae_Headshot.jpg";
 
 function Philosophy() {
   return (
-    <Section id="philosophy" $tone="alt">
+    <Section id="philosophy" tone="alt">
       <Container>
         <Grid>
           <PhotoFrame>

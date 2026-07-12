@@ -1,12 +1,13 @@
 import Styled from "styled-components";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import tmMarkFooter from "../images/tm_mark_footer.png";
 
 function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <FooterBar>
-      <Wordmark>Teisha McRae</Wordmark>
+      <Wordmark src={tmMarkFooter} alt="Teisha McRae" />
       <Copyright>
         © {year} Teisha McRae. Designed &amp; built with care 🩵
       </Copyright>
@@ -43,12 +44,10 @@ const FooterBar = Styled.footer`
   gap: var(--space-4);
 `;
 
-const Wordmark = Styled.p`
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 500;
-  font-size: 1.05rem;
-  color: var(--color-white);
+const Wordmark = Styled.img`
+  height: 30px;
+  width: auto;
+  display: block;
 `;
 
 const Copyright = Styled.p`

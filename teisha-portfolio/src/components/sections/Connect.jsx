@@ -6,7 +6,7 @@ import TeishaResume from "../../assets/Teisha_McRae_Resume.pdf";
 
 function Connect() {
   return (
-    <Section id="connect" $tone="paper">
+    <Section id="connect" tone="paper">
       <Container>
         <Inner>
           <Eyebrow>Get in Touch</Eyebrow>
@@ -17,7 +17,7 @@ function Connect() {
           </Lead>
           <CtaRow>
             <Button href="mailto:mcraeteisha@gmail.com">Email Me</Button>
-            <ButtonOutline href={TeishaResume} download>
+            <ButtonOutline href={TeishaResume} download="Teisha_McRae_Resume.pdf">
               Download Résumé
             </ButtonOutline>
           </CtaRow>

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import Styled from "styled-components";
+import Styled, { keyframes } from "styled-components";
 import Section from "../ui/Section";
 import Container from "../ui/Container";
 import bookCover from "../../images/thiscouldbeus.jpg";
@@ -35,7 +35,7 @@ function Horizon() {
   }, []);
 
   return (
-    <Section id="next" $tone="aubergine">
+    <HorizonSection id="next" tone="aubergine">
       <Container>
         <Eyebrow>Looking Ahead</Eyebrow>
         <Quote>
@@ -73,9 +73,31 @@ function Horizon() {
           </NowFooter>
         </NowCard>
       </Container>
-    </Section>
+    </HorizonSection>
   );
 }
+
+const drift = keyframes`
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-3%, 4%) scale(1.1); }
+`;
+
+const HorizonSection = Styled(Section)`
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -10%;
+    z-index: 0;
+    background:
+      radial-gradient(circle at 25% 25%, rgba(183, 209, 234, 0.16) 0%, transparent 45%),
+      radial-gradient(circle at 75% 75%, rgba(183, 209, 234, 0.1) 0%, transparent 50%);
+    animation: ${drift} 30s ease-in-out infinite alternate;
+    pointer-events: none;
+  }
+`;
 
 const Eyebrow = Styled.p`
   font-family: var(--font-body);

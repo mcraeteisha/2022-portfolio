@@ -15,7 +15,7 @@ const TAGS = [
 
 function Work() {
   return (
-    <Section id="work" $tone="alt">
+    <Section id="work" tone="alt">
       <Container>
         <Eyebrow>Selected Work</Eyebrow>
         <Heading>A closer look at how I work</Heading>

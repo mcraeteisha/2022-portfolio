@@ -4,18 +4,11 @@ import Container from "../ui/Container";
 
 const MILESTONES = [
   {
-    year: "2015",
-    title: "B.A. English Literature & Communication Studies",
-    place: "UNC-Chapel Hill",
+    year: "2022 – Present",
+    title: "Software Engineer",
+    place: "Decisions",
     description:
-      "The start of a lifelong interest in how people communicate, and what gets lost when they don't.",
-  },
-  {
-    year: "2015 – 2021",
-    title: "Content Specialist → Product & QA",
-    place: "Written Word Media",
-    description:
-      "Six years across email marketing, operations, product, and QA. The technical work — debugging, testing, untangling how something actually functioned — was the part I looked forward to most.",
+      "Four years in, building tools that simplify complex workflows — and increasingly drawn to the space where engineering meets product and design.",
   },
   {
     year: "2021",
@@ -25,17 +18,24 @@ const MILESTONES = [
       "Made it official. Learned to build the kinds of tools I'd been troubleshooting for years, and found the intersection of communication and logic I'd been looking for all along.",
   },
   {
-    year: "2022 – Present",
-    title: "Software Engineer",
-    place: "Decisions",
+    year: "2017 – 2022",
+    title: "Content Specialist → Product & QA",
+    place: "Written Word Media",
     description:
-      "Four years in, building tools that simplify complex workflows — and increasingly drawn to the space where engineering meets product and design.",
+      "Five years across email marketing, operations, product, and QA. The technical work — debugging, testing, untangling how something actually functioned — was the part I looked forward to most.",
+  },
+  {
+    year: "2015",
+    title: "B.A. English Literature & Communication Studies",
+    place: "UNC-Chapel Hill",
+    description:
+      "The start of a lifelong interest in how people communicate, and what gets lost when they don't.",
   },
 ];
 
 function Journey() {
   return (
-    <Section id="journey" $tone="paper">
+    <Section id="journey" tone="paper">
       <Container>
         <Eyebrow>Journey</Eyebrow>
         <Heading>The long way around</Heading>
@@ -83,7 +83,7 @@ const Timeline = Styled.div`
     top: 6px;
     bottom: 6px;
     width: 2px;
-    background: linear-gradient(180deg, var(--color-breeze) 0%, var(--color-aubergine) 100%);
+    background: linear-gradient(180deg, var(--color-aubergine) 0%, var(--color-breeze) 100%);
     opacity: 0.5;
   }
 `;

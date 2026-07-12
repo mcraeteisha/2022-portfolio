@@ -47,6 +47,8 @@ const Wordmark = Styled.a`
 `;
 
 const NavCta = Styled.a`
+  position: relative;
+  overflow: hidden;
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 500;
@@ -57,10 +59,27 @@ const NavCta = Styled.a`
   border-radius: var(--radius-md);
   transition: border-color 0.2s ease, background 0.2s ease;
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%);
+    transform: skewX(-20deg);
+    transition: left 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+
   &:hover {
     border-color: var(--color-aubergine);
     background: var(--color-breeze-soft);
     color: var(--color-aubergine);
+  }
+
+  &:hover::after {
+    left: 125%;
   }
 `;
 
