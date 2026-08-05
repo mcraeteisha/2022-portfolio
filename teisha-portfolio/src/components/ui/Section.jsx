@@ -2,10 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import Styled from "styled-components";
 
 const TONES = {
-  paper: "var(--color-paper)",
-  alt: "var(--color-paper-alt)",
-  aubergine: "var(--color-aubergine)",
+  paper: "var(--color-bone)",
+  alt: "var(--color-sand)",
+  burgundy: "var(--color-burgundy)",
+  green: "var(--color-green)",
 };
+
+const DARK_TONES = ["burgundy", "green"];
 
 function Section({ id, tone, className, children }) {
   const ref = useRef(null);
@@ -39,7 +42,7 @@ function Section({ id, tone, className, children }) {
 const Wrapper = Styled.section`
   padding: var(--space-16) 0;
   background: ${({ $tone }) => TONES[$tone] || TONES.paper};
-  color: ${({ $tone }) => ($tone === "aubergine" ? "var(--color-breeze-soft)" : "inherit")};
+  color: ${({ $tone }) => (DARK_TONES.includes($tone) ? "rgba(245, 240, 231, 0.82)" : "inherit")};
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
@@ -52,10 +55,9 @@ const Wrapper = Styled.section`
   `}
 
   ${({ $tone }) =>
-    $tone === "aubergine" &&
+    DARK_TONES.includes($tone) &&
     `
-    h1, h2, h3, h4 { color: var(--color-white); }
-    p { color: var(--color-breeze-soft); }
+    h1, h2, h3, h4 { color: var(--color-bone); }
   `}
 
   @media (max-width: 640px) {

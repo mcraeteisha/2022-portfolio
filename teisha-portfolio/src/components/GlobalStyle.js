@@ -2,30 +2,26 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 :root {
+  /* Ground */
+  --color-bone: #F5F0E7;
+  --color-sand: #EDE5D8;
+
+  /* Ink */
+  --color-wine-black: #1E1016;
+  --color-ink-soft: #5C4650;
+  --color-ink-faint: #8B7680;
+
   /* Brand */
-  --color-aubergine: #301728;
-  --color-breeze: #B7D1EA;
+  --color-burgundy: #7B1E3C;
+  --color-rose: #E4607E;
+  --color-green: #1E4B3A;
 
-  /* Surfaces */
-  --color-paper: #FBF9F7;
-  --color-paper-alt: #EEF3F9;
-  --color-white: #FFFFFF;
-
-  /* Text */
-  --color-ink: #241220;
-  --color-ink-soft: #6B5A65;
-  --color-border: rgba(48, 23, 40, 0.12);
-
-  /* Accent variants */
-  --color-breeze-soft: #E4EDF6;
-  --color-breeze-deep: #3D6690;
-
-  /* Metallic accent (buttons, borders, dividers) */
-  --gradient-metallic: linear-gradient(135deg, #EFE9EC 0%, #CFC7D1 45%, var(--color-breeze) 100%);
+  --color-border: rgba(30, 16, 22, 0.12);
 
   /* Typography */
-  --font-display: "Playfair Display", "Iowan Old Style", Georgia, serif;
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --font-body: "General Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
@@ -37,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
   --text-3xl: 2.75rem;
   --text-4xl: clamp(2.5rem, 4vw + 1rem, 3.75rem);
   --text-5xl: clamp(3.25rem, 5vw + 1rem, 5rem);
-  --text-hero: clamp(3rem, 6vw + 1rem, 6.5rem);
+  --text-hero: clamp(2.5rem, 4vw + 1rem, 4.5rem);
 
   /* Spacing (4px base) */
   --space-1: 0.25rem;
@@ -52,9 +48,9 @@ const GlobalStyle = createGlobalStyle`
   --space-16: 8rem;
   --space-20: 10rem;
 
-  --radius-sm: 6px;
-  --radius-md: 14px;
-  --radius-lg: 28px;
+  --radius-sm: 0px;
+  --radius-md: 2px;
+  --radius-lg: 4px;
 
   --container-max: 1120px;
 }
@@ -70,8 +66,8 @@ html {
 }
 
 body {
-  background: var(--color-paper);
-  color: var(--color-ink);
+  background: var(--color-bone);
+  color: var(--color-wine-black);
   font-family: var(--font-body);
   font-size: var(--text-base);
   line-height: 1.6;
@@ -81,9 +77,9 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 600;
-  line-height: 1.15;
-  color: var(--color-aubergine);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--color-wine-black);
 }
 
 h1 { font-size: var(--text-hero); }
@@ -97,12 +93,12 @@ p {
 }
 
 a {
-  color: var(--color-aubergine);
+  color: var(--color-burgundy);
   text-decoration: none;
   transition: color 0.2s ease;
 
   &:hover {
-    color: var(--color-breeze-deep);
+    color: var(--color-rose);
   }
 }
 

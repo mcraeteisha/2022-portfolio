@@ -25,68 +25,16 @@ const LORE_TAGS = [
 
 function Work() {
   return (
-    <Section id="work" tone="alt">
-      <Container>
-        <Eyebrow>Selected Work</Eyebrow>
-        <Heading>A closer look at how I work</Heading>
+    <>
+      <Section id="work" tone="alt">
+        <Container>
+          <Eyebrow>Selected Work</Eyebrow>
+          <Heading>A closer look at how I work</Heading>
+        </Container>
+      </Section>
 
-        <FeaturedCard>
-          <CardMeta>Decisions · Software Engineer</CardMeta>
-          <CardTitle>Enterprise API Security Audit</CardTitle>
-
-          <StatsRow>
-            <Stat>
-              <StatNumber>700+</StatNumber>
-              <StatLabel>API endpoints audited</StatLabel>
-            </Stat>
-            <Stat>
-              <StatNumber>250</StatNumber>
-              <StatLabel>Vulnerabilities identified</StatLabel>
-            </Stat>
-          </StatsRow>
-
-          <CaseBlock>
-            <CaseLabel>The Problem</CaseLabel>
-            <p>
-              Our platform had grown significantly, with hundreds of API
-              endpoints built by different teams at different stages of the
-              product&rsquo;s evolution. We needed confidence that every
-              endpoint had proper authentication and authorization — but
-              manually reviewing the entire API surface wasn&rsquo;t
-              realistic.
-            </p>
-          </CaseBlock>
-
-          <CaseBlock>
-            <CaseLabel>My Approach</CaseLabel>
-            <p>
-              I led a comprehensive audit of more than 700 API endpoints,
-              using AI to identify patterns and flag routes that appeared to
-              be missing protection, then manually validating every finding
-              through code review and Postman testing. Throughout, I
-              documented findings, categorized vulnerabilities, and worked
-              with the team to prioritize fixes.
-            </p>
-          </CaseBlock>
-
-          <CaseBlock>
-            <CaseLabel>The Outcome</CaseLabel>
-            <p>
-              The audit surfaced roughly 250 endpoints with security issues
-              or missing protections — meaningfully improving the
-              platform&rsquo;s security posture and establishing a clearer
-              process for catching gaps like this earlier going forward.
-            </p>
-          </CaseBlock>
-
-          <TagRow>
-            {TAGS.map((tag) => (
-              <Tag key={tag}>{tag}</Tag>
-            ))}
-          </TagRow>
-        </FeaturedCard>
-
-        <FeaturedCard>
+      <Section tone="burgundy">
+        <Container>
           <CardMeta>Personal Project · Product &amp; Engineering</CardMeta>
           <CardTitle>Lore — a home for a story before it&rsquo;s a draft</CardTitle>
 
@@ -140,64 +88,125 @@ function Work() {
           >
             View the repo →
           </CardLink>
-        </FeaturedCard>
+        </Container>
+      </Section>
 
-        <SecondaryEntry>
-          <SecondaryText>
-            <SecondaryLabel>Where I Started</SecondaryLabel>
-            <SecondaryTitle>Written Word Media</SecondaryTitle>
+      <Section tone="green">
+        <Container>
+          <CardMeta>Decisions · Software Engineer</CardMeta>
+          <CardTitle>Enterprise API Security Audit</CardTitle>
+
+          <StatsRow>
+            <Stat>
+              <StatNumber>700+</StatNumber>
+              <StatLabel>API endpoints audited</StatLabel>
+            </Stat>
+            <Stat>
+              <StatNumber>250</StatNumber>
+              <StatLabel>Vulnerabilities identified</StatLabel>
+            </Stat>
+          </StatsRow>
+
+          <CaseBlock>
+            <CaseLabel>The Problem</CaseLabel>
             <p>
-              Before engineering, I spent six years at Written Word Media —
-              eventually finding my footing in QA and product, updating
-              landing pages, sign-up forms, and 50+ email templates while
-              managing internal testing processes.
+              Our platform had grown significantly, with hundreds of API
+              endpoints built by different teams at different stages of the
+              product&rsquo;s evolution. We needed confidence that every
+              endpoint had proper authentication and authorization — but
+              manually reviewing the entire API surface wasn&rsquo;t
+              realistic.
             </p>
-            <SecondaryLink
-              href="https://www.writtenwordmedia.com/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              writtenwordmedia.com →
-            </SecondaryLink>
-          </SecondaryText>
-          <SecondaryImage src={WWMEmail} alt="Written Word Media email template" />
-        </SecondaryEntry>
-      </Container>
-    </Section>
+          </CaseBlock>
+
+          <CaseBlock>
+            <CaseLabel>My Approach</CaseLabel>
+            <p>
+              I led a comprehensive audit of more than 700 API endpoints,
+              using AI to identify patterns and flag routes that appeared to
+              be missing protection, then manually validating every finding
+              through code review and Postman testing. Throughout, I
+              documented findings, categorized vulnerabilities, and worked
+              with the team to prioritize fixes.
+            </p>
+          </CaseBlock>
+
+          <CaseBlock>
+            <CaseLabel>The Outcome</CaseLabel>
+            <p>
+              The audit surfaced roughly 250 endpoints with security issues
+              or missing protections — meaningfully improving the
+              platform&rsquo;s security posture and establishing a clearer
+              process for catching gaps like this earlier going forward.
+            </p>
+          </CaseBlock>
+
+          <TagRow>
+            {TAGS.map((tag) => (
+              <Tag key={tag}>{tag}</Tag>
+            ))}
+          </TagRow>
+        </Container>
+      </Section>
+
+      <Section tone="paper">
+        <Container>
+          <SecondaryEntry>
+            <SecondaryText>
+              <SecondaryLabel>Where I Started</SecondaryLabel>
+              <SecondaryTitle>Written Word Media</SecondaryTitle>
+              <p>
+                Before engineering, I spent six years at Written Word Media —
+                eventually finding my footing in QA and product, updating
+                landing pages, sign-up forms, and 50+ email templates while
+                managing internal testing processes.
+              </p>
+              <SecondaryLink
+                href="https://www.writtenwordmedia.com/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                writtenwordmedia.com →
+              </SecondaryLink>
+            </SecondaryText>
+            <SecondaryImage src={WWMEmail} alt="Written Word Media email template" />
+          </SecondaryEntry>
+        </Container>
+      </Section>
+    </>
   );
 }
 
 const Eyebrow = Styled.p`
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   font-size: var(--text-sm);
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-breeze-deep);
+  color: var(--color-green);
   margin-bottom: var(--space-5);
+
+  &::before {
+    content: "/* ";
+  }
+
+  &::after {
+    content: " */";
+  }
 `;
 
 const Heading = Styled.h2`
   font-size: var(--text-4xl);
-  margin-bottom: var(--space-12);
   max-width: 18ch;
 `;
 
-const FeaturedCard = Styled.div`
-  background: var(--color-paper);
-  border-radius: var(--radius-lg);
-  padding: var(--space-10) clamp(1.5rem, 5vw, var(--space-12));
-  box-shadow: 0 32px 64px -32px rgba(48, 23, 40, 0.25);
-  margin-bottom: var(--space-10);
-`;
-
 const CardMeta = Styled.p`
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   font-size: var(--text-sm);
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-breeze-deep);
+  color: rgba(245, 240, 231, 0.65);
   margin-bottom: var(--space-2);
 `;
 
@@ -211,7 +220,7 @@ const StatsRow = Styled.div`
   gap: var(--space-10);
   padding-bottom: var(--space-8);
   margin-bottom: var(--space-8);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(245, 240, 231, 0.2);
 
   @media (max-width: 480px) {
     gap: var(--space-6);
@@ -222,17 +231,18 @@ const Stat = Styled.div``;
 
 const StatNumber = Styled.p`
   font-family: var(--font-display);
-  font-size: var(--text-4xl);
+  font-size: clamp(4rem, 10vw, 8rem);
   font-weight: 600;
-  color: var(--color-aubergine);
   line-height: 1;
-  margin-bottom: var(--space-2);
+  color: var(--color-bone);
+  margin-bottom: var(--space-3);
 `;
 
 const StatLabel = Styled.p`
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   font-size: var(--text-sm);
-  color: var(--color-ink-soft);
+  letter-spacing: 0.05em;
+  color: rgba(245, 240, 231, 0.65);
 `;
 
 const CaseBlock = Styled.div`
@@ -244,17 +254,17 @@ const CaseBlock = Styled.div`
   }
 
   p {
-    color: var(--color-ink-soft);
+    color: rgba(245, 240, 231, 0.82);
   }
 `;
 
 const CaseLabel = Styled.p`
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   font-size: var(--text-xs);
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-aubergine);
+  color: rgba(245, 240, 231, 0.65);
   margin-bottom: var(--space-2);
 `;
 
@@ -265,11 +275,14 @@ const TagRow = Styled.div`
 `;
 
 const Tag = Styled.span`
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   font-size: var(--text-xs);
   font-weight: 500;
-  color: var(--color-aubergine);
-  background: var(--color-breeze-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-bone);
+  background: rgba(245, 240, 231, 0.08);
+  border: 1px solid rgba(245, 240, 231, 0.3);
   padding: 0.4rem 0.85rem;
   border-radius: var(--radius-sm);
 `;
@@ -280,6 +293,11 @@ const CardLink = Styled.a`
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 500;
+  color: var(--color-bone);
+
+  &:hover {
+    color: var(--color-rose);
+  }
 `;
 
 const SecondaryEntry = Styled.div`
@@ -303,12 +321,12 @@ const SecondaryText = Styled.div`
 `;
 
 const SecondaryLabel = Styled.p`
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   font-size: var(--text-xs);
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-breeze-deep);
+  color: var(--color-green);
   margin-bottom: var(--space-2);
 `;
 
@@ -326,7 +344,7 @@ const SecondaryLink = Styled.a`
 const SecondaryImage = Styled.img`
   width: 100%;
   border-radius: var(--radius-md);
-  box-shadow: 0 16px 32px -16px rgba(48, 23, 40, 0.3);
+  box-shadow: 0 16px 32px -16px rgba(123, 30, 60, 0.3);
 `;
 
 export default Work;

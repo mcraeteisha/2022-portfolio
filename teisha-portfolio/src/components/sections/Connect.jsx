@@ -1,12 +1,12 @@
 import Styled from "styled-components";
 import Section from "../ui/Section";
 import Container from "../ui/Container";
-import { Button, ButtonOutline } from "../ui/Button";
+import { ButtonInverse, ButtonOutlineInverse } from "../ui/Button";
 import TeishaResume from "../../assets/Teisha_McRae_Resume.pdf";
 
 function Connect() {
   return (
-    <Section id="connect" tone="paper">
+    <Section id="connect" tone="burgundy">
       <Container>
         <Inner>
           <Eyebrow>Get in Touch</Eyebrow>
@@ -16,10 +16,10 @@ function Connect() {
             shop — I&rsquo;d love to hear from you.
           </Lead>
           <CtaRow>
-            <Button href="mailto:mcraeteisha@gmail.com">Email Me</Button>
-            <ButtonOutline href={TeishaResume} download="Teisha_McRae_Resume.pdf">
+            <ButtonInverse href="mailto:mcraeteisha@gmail.com">Email Me</ButtonInverse>
+            <ButtonOutlineInverse href={TeishaResume} download="Teisha_McRae_Resume.pdf">
               Download Résumé
-            </ButtonOutline>
+            </ButtonOutlineInverse>
           </CtaRow>
         </Inner>
       </Container>
@@ -34,13 +34,21 @@ const Inner = Styled.div`
 `;
 
 const Eyebrow = Styled.p`
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   font-size: var(--text-sm);
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-breeze-deep);
+  color: var(--color-rose);
   margin-bottom: var(--space-5);
+
+  &::before {
+    content: "/* ";
+  }
+
+  &::after {
+    content: " */";
+  }
 `;
 
 const Heading = Styled.h2`
@@ -50,7 +58,7 @@ const Heading = Styled.h2`
 
 const Lead = Styled.p`
   font-size: var(--text-md);
-  color: var(--color-ink-soft);
+  color: rgba(245, 240, 231, 0.82);
   margin-bottom: var(--space-8);
 `;
 

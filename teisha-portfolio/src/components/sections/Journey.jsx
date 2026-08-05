@@ -43,11 +43,12 @@ function Journey() {
         <Timeline>
           {MILESTONES.map((milestone) => (
             <Item key={milestone.title}>
-              <Marker />
               <Year>{milestone.year}</Year>
-              <Title>{milestone.title}</Title>
-              <Place>{milestone.place}</Place>
-              <Description>{milestone.description}</Description>
+              <Content>
+                <Title>{milestone.title}</Title>
+                <Place>{milestone.place}</Place>
+                <Description>{milestone.description}</Description>
+              </Content>
             </Item>
           ))}
         </Timeline>
@@ -57,13 +58,21 @@ function Journey() {
 }
 
 const Eyebrow = Styled.p`
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   font-size: var(--text-sm);
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-breeze-deep);
+  color: var(--color-green);
   margin-bottom: var(--space-5);
+
+  &::before {
+    content: "/* ";
+  }
+
+  &::after {
+    content: " */";
+  }
 `;
 
 const Heading = Styled.h2`
@@ -73,49 +82,30 @@ const Heading = Styled.h2`
 `;
 
 const Timeline = Styled.div`
-  position: relative;
-  padding-left: var(--space-8);
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 5px;
-    top: 6px;
-    bottom: 6px;
-    width: 2px;
-    background: linear-gradient(180deg, var(--color-aubergine) 0%, var(--color-breeze) 100%);
-    opacity: 0.5;
-  }
+  border-top: 1px solid var(--color-border);
 `;
 
 const Item = Styled.div`
-  position: relative;
-  padding-bottom: var(--space-10);
+  display: grid;
+  grid-template-columns: minmax(96px, 160px) 1fr;
+  gap: var(--space-6);
+  padding: var(--space-8) 0;
+  border-bottom: 1px solid var(--color-border);
 
-  &:last-child {
-    padding-bottom: 0;
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
   }
 `;
 
-const Marker = Styled.div`
-  position: absolute;
-  left: calc(-1 * var(--space-8) + 1px);
-  top: 6px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--color-aubergine);
-  box-shadow: 0 0 0 4px var(--color-paper), 0 0 0 5px var(--color-border);
-`;
+const Content = Styled.div``;
 
 const Year = Styled.p`
-  font-family: var(--font-body);
-  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  font-size: var(--text-2xl);
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-breeze-deep);
-  margin-bottom: var(--space-2);
+  color: var(--color-burgundy);
+  line-height: 1.15;
 `;
 
 const Title = Styled.h3`

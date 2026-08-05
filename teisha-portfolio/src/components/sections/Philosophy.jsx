@@ -52,7 +52,7 @@ const PhotoFrame = Styled.div`
   aspect-ratio: 4 / 5;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 24px 48px -24px rgba(48, 23, 40, 0.35);
+  box-shadow: 0 24px 48px -24px rgba(123, 30, 60, 0.35);
 
   img {
     width: 100%;
@@ -66,13 +66,21 @@ const TextColumn = Styled.div`
 `;
 
 const Eyebrow = Styled.p`
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   font-size: var(--text-sm);
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-breeze-deep);
+  color: var(--color-green);
   margin-bottom: var(--space-5);
+
+  &::before {
+    content: "/* ";
+  }
+
+  &::after {
+    content: " */";
+  }
 `;
 
 const Quote = Styled.h2`

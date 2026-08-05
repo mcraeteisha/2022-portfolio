@@ -16,52 +16,60 @@ const base = css`
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -75%;
-    width: 45%;
-    height: 100%;
-    background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
-    transform: skewX(-20deg);
-    transition: left 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    pointer-events: none;
-  }
-
   &:hover {
     transform: translateY(-2px);
     text-decoration: none;
-  }
-
-  &:hover::after {
-    left: 125%;
   }
 `;
 
 export const Button = Styled.a`
   ${base}
-  background: var(--color-aubergine);
-  color: var(--color-white);
-  box-shadow: 0 1px 2px rgba(48, 23, 40, 0.15);
+  background: var(--color-burgundy);
+  color: var(--color-bone);
+  box-shadow: 0 1px 2px rgba(123, 30, 60, 0.15);
 
   &:hover {
-    background: #43223a;
-    box-shadow: 0 10px 24px -8px rgba(48, 23, 40, 0.45), 0 0 0 1px rgba(183, 209, 234, 0.3);
-    color: var(--color-white);
+    background: #5A1730;
+    box-shadow: 0 10px 24px -8px rgba(123, 30, 60, 0.45), 0 0 0 1px rgba(228, 96, 126, 0.3);
+    color: var(--color-bone);
   }
 `;
 
 export const ButtonOutline = Styled.a`
   ${base}
   background: transparent;
-  color: var(--color-aubergine);
+  color: var(--color-burgundy);
   border-color: var(--color-border);
 
   &:hover {
-    border-color: var(--color-aubergine);
-    background: var(--color-breeze-soft);
-    color: var(--color-aubergine);
+    border-color: var(--color-burgundy);
+    background: rgba(123, 30, 60, 0.08);
+    color: var(--color-burgundy);
+  }
+`;
+
+export const ButtonInverse = Styled.a`
+  ${base}
+  background: var(--color-bone);
+  color: var(--color-burgundy);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+
+  &:hover {
+    background: #FFFFFF;
+    color: var(--color-burgundy);
+  }
+`;
+
+export const ButtonOutlineInverse = Styled.a`
+  ${base}
+  background: transparent;
+  color: var(--color-bone);
+  border-color: rgba(245, 240, 231, 0.4);
+
+  &:hover {
+    border-color: var(--color-bone);
+    background: rgba(245, 240, 231, 0.1);
+    color: var(--color-bone);
   }
 `;
 

@@ -34,8 +34,8 @@ function Footer() {
 }
 
 const FooterBar = Styled.footer`
-  background: var(--color-aubergine);
-  color: var(--color-breeze-soft);
+  background: var(--color-burgundy);
+  color: var(--color-bone);
   padding: var(--space-6) clamp(1.5rem, 5vw, 4rem);
   display: flex;
   align-items: center;
@@ -53,17 +53,17 @@ const Wordmark = Styled.img`
 const Copyright = Styled.p`
   font-family: var(--font-body);
   font-size: var(--text-xs);
-  color: var(--color-breeze-soft);
+  color: var(--color-bone);
 `;
 
 const SocialRow = Styled.div`
   display: flex;
   gap: var(--space-4);
   font-size: 1.1rem;
-  color: var(--color-white);
+  color: var(--color-bone);
 
   a:hover {
-    color: var(--color-breeze);
+    color: var(--color-rose);
   }
 `;
 
