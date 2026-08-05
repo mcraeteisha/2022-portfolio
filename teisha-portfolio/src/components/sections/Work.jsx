@@ -13,6 +13,16 @@ const TAGS = [
   "Git",
 ];
 
+const LORE_TAGS = [
+  "Product Strategy",
+  "Positioning",
+  "Competitive Analysis",
+  "UX/UI Design",
+  "Next.js",
+  "TypeScript",
+  "AI Product Design",
+];
+
 function Work() {
   return (
     <Section id="work" tone="alt">
@@ -74,6 +84,62 @@ function Work() {
               <Tag key={tag}>{tag}</Tag>
             ))}
           </TagRow>
+        </FeaturedCard>
+
+        <FeaturedCard>
+          <CardMeta>Personal Project · Product &amp; Engineering</CardMeta>
+          <CardTitle>Lore — a home for a story before it&rsquo;s a draft</CardTitle>
+
+          <CaseBlock>
+            <CaseLabel>The Problem</CaseLabel>
+            <p>
+              As an aspiring romance author and Sims content creator, my own
+              story ideas were scattered across notebooks, sticky notes,
+              Notion, Pinterest, and Tumblr. None of it connected — a
+              character sketch in one app, her inspiration board in another,
+              the actual scene nowhere near either — so the thread between
+              them slipped away every time.
+            </p>
+          </CaseBlock>
+
+          <CaseBlock>
+            <CaseLabel>My Approach</CaseLabel>
+            <p>
+              I defined the product from scratch — the persona, and where it
+              sits against AI writing tools that write <em>for</em> you and
+              worldbuilding wikis that feel like cold databases. At the
+              center is Spark, an AI collaborator built around one rule: it
+              asks questions and nudges creativity, but never writes the
+              story for you. I then designed and built the brand site and
+              product foundation in Next.js and TypeScript.
+            </p>
+          </CaseBlock>
+
+          <CaseBlock>
+            <CaseLabel>Where It&rsquo;s Headed</CaseLabel>
+            <p>
+              Right now I&rsquo;m doing user research — talking to
+              storytellers about how they currently organize their ideas and
+              where Lore could actually fit into that — while building out
+              the inspiration boards, characters, and worlds that all link
+              together, with the writing surface itself as the next
+              fast-follow.
+            </p>
+          </CaseBlock>
+
+          <TagRow>
+            {LORE_TAGS.map((tag) => (
+              <Tag key={tag}>{tag}</Tag>
+            ))}
+          </TagRow>
+
+          <CardLink
+            href="https://github.com/mcraeteisha/storyspace"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            View the repo →
+          </CardLink>
         </FeaturedCard>
 
         <SecondaryEntry>
@@ -206,6 +272,14 @@ const Tag = Styled.span`
   background: var(--color-breeze-soft);
   padding: 0.4rem 0.85rem;
   border-radius: var(--radius-sm);
+`;
+
+const CardLink = Styled.a`
+  display: inline-block;
+  margin-top: var(--space-6);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
 `;
 
 const SecondaryEntry = Styled.div`
