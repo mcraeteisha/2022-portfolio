@@ -1,7 +1,6 @@
 import Styled from "styled-components";
 import Section from "../ui/Section";
 import Container from "../ui/Container";
-import WWMEmail from "../../images/wwm_email_templates_green.png";
 
 const TAGS = [
   "Laravel",
@@ -25,16 +24,11 @@ const LORE_TAGS = [
 
 function Work() {
   return (
-    <>
-      <Section id="work" tone="alt">
-        <Container>
-          <Eyebrow>Selected Work</Eyebrow>
-          <Heading>A closer look at how I work</Heading>
-        </Container>
-      </Section>
+    <Section id="work" tone="alt">
+      <Container>
+        <Eyebrow>Selected Work</Eyebrow>
 
-      <Section tone="burgundy">
-        <Container>
+        <Panel $tone="burgundy">
           <CardMeta>Personal Project · Product &amp; Engineering</CardMeta>
           <CardTitle>Lore — a home for a story before it&rsquo;s a draft</CardTitle>
 
@@ -88,11 +82,9 @@ function Work() {
           >
             View the repo →
           </CardLink>
-        </Container>
-      </Section>
+        </Panel>
 
-      <Section tone="green">
-        <Container>
+        <Panel $tone="green">
           <CardMeta>Decisions · Software Engineer</CardMeta>
           <CardTitle>Enterprise API Security Audit</CardTitle>
 
@@ -146,34 +138,9 @@ function Work() {
               <Tag key={tag}>{tag}</Tag>
             ))}
           </TagRow>
-        </Container>
-      </Section>
-
-      <Section tone="paper">
-        <Container>
-          <SecondaryEntry>
-            <SecondaryText>
-              <SecondaryLabel>Where I Started</SecondaryLabel>
-              <SecondaryTitle>Written Word Media</SecondaryTitle>
-              <p>
-                Before engineering, I spent six years at Written Word Media —
-                eventually finding my footing in QA and product, updating
-                landing pages, sign-up forms, and 50+ email templates while
-                managing internal testing processes.
-              </p>
-              <SecondaryLink
-                href="https://www.writtenwordmedia.com/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                writtenwordmedia.com →
-              </SecondaryLink>
-            </SecondaryText>
-            <SecondaryImage src={WWMEmail} alt="Written Word Media email template" />
-          </SecondaryEntry>
-        </Container>
-      </Section>
-    </>
+        </Panel>
+      </Container>
+    </Section>
   );
 }
 
@@ -184,7 +151,7 @@ const Eyebrow = Styled.p`
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-green);
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-6);
 
   &::before {
     content: "/* ";
@@ -195,9 +162,16 @@ const Eyebrow = Styled.p`
   }
 `;
 
-const Heading = Styled.h2`
-  font-size: var(--text-4xl);
-  max-width: 18ch;
+const Panel = Styled.div`
+  background: ${({ $tone }) => ($tone === "green" ? "var(--panel-green)" : "var(--panel-burgundy)")};
+  border-radius: var(--radius-lg);
+  padding: var(--space-10) clamp(1.5rem, 5vw, var(--space-12));
+  margin-bottom: var(--space-8);
+  box-shadow: 0 24px 48px -24px rgba(30, 16, 22, 0.35);
+
+  h1, h2, h3, h4 {
+    color: var(--color-bone);
+  }
 `;
 
 const CardMeta = Styled.p`
@@ -231,7 +205,7 @@ const Stat = Styled.div``;
 
 const StatNumber = Styled.p`
   font-family: var(--font-display);
-  font-size: clamp(4rem, 10vw, 8rem);
+  font-size: clamp(2.75rem, 6vw, 5rem);
   font-weight: 600;
   line-height: 1;
   color: var(--color-bone);
@@ -298,53 +272,6 @@ const CardLink = Styled.a`
   &:hover {
     color: var(--color-rose);
   }
-`;
-
-const SecondaryEntry = Styled.div`
-  display: grid;
-  grid-template-columns: 1fr minmax(180px, 260px);
-  gap: var(--space-8);
-  align-items: center;
-
-  @media (max-width: 640px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
-const SecondaryText = Styled.div`
-  max-width: 55ch;
-
-  p {
-    color: var(--color-ink-soft);
-    margin-bottom: var(--space-4);
-  }
-`;
-
-const SecondaryLabel = Styled.p`
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--color-green);
-  margin-bottom: var(--space-2);
-`;
-
-const SecondaryTitle = Styled.h3`
-  font-size: var(--text-xl);
-  margin-bottom: var(--space-3);
-`;
-
-const SecondaryLink = Styled.a`
-  font-family: var(--font-body);
-  font-size: var(--text-sm);
-  font-weight: 500;
-`;
-
-const SecondaryImage = Styled.img`
-  width: 100%;
-  border-radius: var(--radius-md);
-  box-shadow: 0 16px 32px -16px rgba(123, 30, 60, 0.3);
 `;
 
 export default Work;

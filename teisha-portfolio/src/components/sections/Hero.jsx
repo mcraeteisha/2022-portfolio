@@ -85,13 +85,13 @@ const CtaRow = Styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-4);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-3);
 `;
 
 const SocialRow = Styled.div`
   display: flex;
-  gap: var(--space-5);
-  font-size: 1.35rem;
+  gap: var(--space-3);
+  font-size: 1.65rem;
   color: var(--color-burgundy);
 
   a:hover {

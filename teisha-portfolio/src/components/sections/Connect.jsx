@@ -6,7 +6,7 @@ import TeishaResume from "../../assets/Teisha_McRae_Resume.pdf";
 
 function Connect() {
   return (
-    <Section id="connect" tone="burgundy">
+    <Section id="connect" tone="ink">
       <Container>
         <Inner>
           <Eyebrow>Get in Touch</Eyebrow>
@@ -58,7 +58,7 @@ const Heading = Styled.h2`
 
 const Lead = Styled.p`
   font-size: var(--text-md);
-  color: rgba(245, 240, 231, 0.82);
+  color: var(--on-panel-soft);
   margin-bottom: var(--space-8);
 `;
 

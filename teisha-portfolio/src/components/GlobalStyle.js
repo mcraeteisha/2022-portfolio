@@ -2,6 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 :root {
+  /* ---- Reading palette. These FLIP between light and dark. ---- */
+
   /* Ground */
   --color-bone: #F5F0E7;
   --color-sand: #EDE5D8;
@@ -11,12 +13,26 @@ const GlobalStyle = createGlobalStyle`
   --color-ink-soft: #5C4650;
   --color-ink-faint: #8B7680;
 
-  /* Brand */
+  /* Brand accents — text, links, marks */
   --color-burgundy: #7B1E3C;
   --color-rose: #E4607E;
   --color-green: #1E4B3A;
 
   --color-border: rgba(30, 16, 22, 0.12);
+  --nav-bg: rgba(245, 240, 231, 0.82);
+
+  /* ---- Panels. Always dark in BOTH themes, so anything sitting on top
+     of them stays light. Never use --color-burgundy/green as a surface;
+     as an accent it gets lighter in dark mode, which is backwards for a
+     background. ---- */
+  --panel-burgundy: #7B1E3C;
+  --panel-burgundy-hover: #5A1730;
+  --panel-green: #1E4B3A;
+  --panel-ink: #1E1016;
+  --on-panel: #F5F0E7;
+  --on-panel-soft: rgba(245, 240, 231, 0.82);
+
+  color-scheme: light;
 
   /* Typography */
   --font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
@@ -53,6 +69,56 @@ const GlobalStyle = createGlobalStyle`
   --radius-lg: 4px;
 
   --container-max: 1120px;
+}
+
+/* Dark mode. Follows the OS by default; [data-theme] on <html> overrides it
+   in either direction, so a manual toggle can be added without touching this. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bone: #170D12;
+    --color-sand: #22131A;
+
+    --color-wine-black: #EFE7DC;
+    --color-ink-soft: #B7A6AC;
+    --color-ink-faint: #8A757D;
+
+    --color-burgundy: #D4587E;
+    --color-rose: #F08AA2;
+    --color-green: #5FA98B;
+
+    --color-border: rgba(239, 231, 220, 0.16);
+    --nav-bg: rgba(23, 13, 18, 0.82);
+
+    --panel-burgundy: #5E1630;
+    --panel-burgundy-hover: #7B1E3C;
+    --panel-green: #16382B;
+    --panel-ink: #0C0709;
+
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --color-bone: #170D12;
+  --color-sand: #22131A;
+
+  --color-wine-black: #EFE7DC;
+  --color-ink-soft: #B7A6AC;
+  --color-ink-faint: #8A757D;
+
+  --color-burgundy: #D4587E;
+  --color-rose: #F08AA2;
+  --color-green: #5FA98B;
+
+  --color-border: rgba(239, 231, 220, 0.16);
+  --nav-bg: rgba(23, 13, 18, 0.82);
+
+  --panel-burgundy: #5E1630;
+  --panel-burgundy-hover: #7B1E3C;
+  --panel-green: #16382B;
+  --panel-ink: #0C0709;
+
+  color-scheme: dark;
 }
 
 html {

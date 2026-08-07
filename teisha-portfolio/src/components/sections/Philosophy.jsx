@@ -15,7 +15,7 @@ function Philosophy() {
             <Eyebrow>Philosophy</Eyebrow>
             <Quote>
               I didn&rsquo;t become an engineer because I loved code. I became
-              an engineer because I loved solving problems for people.
+              an engineer because I loved solving problems for <em>people</em>.
             </Quote>
             <Body>
               My career hasn&rsquo;t followed a straight line — and that&rsquo;s
@@ -85,7 +85,6 @@ const Eyebrow = Styled.p`
 
 const Quote = Styled.h2`
   font-size: var(--text-3xl);
-  font-style: italic;
   font-weight: 500;
   margin-bottom: var(--space-6);
 `;

@@ -1,6 +1,6 @@
 import NavBar from "./NavBar";
+import ThemeToggle from "./ThemeToggle";
 import Hero from "./sections/Hero";
-import TableOfContents from "./sections/TableOfContents";
 import Philosophy from "./sections/Philosophy";
 import Journey from "./sections/Journey";
 import Work from "./sections/Work";
@@ -12,8 +12,8 @@ function PortfolioContainer() {
   return (
     <>
       <NavBar />
+      <ThemeToggle />
       <Hero />
-      <TableOfContents />
       <Philosophy />
       <Journey />
       <Work />

@@ -43,12 +43,11 @@ function Journey() {
         <Timeline>
           {MILESTONES.map((milestone) => (
             <Item key={milestone.title}>
+              <Marker />
               <Year>{milestone.year}</Year>
-              <Content>
-                <Title>{milestone.title}</Title>
-                <Place>{milestone.place}</Place>
-                <Description>{milestone.description}</Description>
-              </Content>
+              <Title>{milestone.title}</Title>
+              <Place>{milestone.place}</Place>
+              <Description>{milestone.description}</Description>
             </Item>
           ))}
         </Timeline>
@@ -76,36 +75,55 @@ const Eyebrow = Styled.p`
 `;
 
 const Heading = Styled.h2`
-  font-size: var(--text-4xl);
+  font-size: var(--text-3xl);
   margin-bottom: var(--space-12);
   max-width: 16ch;
 `;
 
 const Timeline = Styled.div`
-  border-top: 1px solid var(--color-border);
-`;
+  position: relative;
+  padding-left: var(--space-8);
 
-const Item = Styled.div`
-  display: grid;
-  grid-template-columns: minmax(96px, 160px) 1fr;
-  gap: var(--space-6);
-  padding: var(--space-8) 0;
-  border-bottom: 1px solid var(--color-border);
-
-  @media (max-width: 640px) {
-    grid-template-columns: 1fr;
-    gap: var(--space-2);
+  &::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--color-burgundy) 0%, var(--color-rose) 100%);
+    opacity: 0.5;
   }
 `;
 
-const Content = Styled.div``;
+const Item = Styled.div`
+  position: relative;
+  padding-bottom: var(--space-10);
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+`;
+
+const Marker = Styled.div`
+  position: absolute;
+  left: calc(-1 * var(--space-8) + 1px);
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-burgundy);
+  box-shadow: 0 0 0 4px var(--color-bone), 0 0 0 5px var(--color-border);
+`;
 
 const Year = Styled.p`
   font-family: var(--font-mono);
-  font-size: var(--text-2xl);
+  font-size: var(--text-xs);
   font-weight: 600;
-  color: var(--color-burgundy);
-  line-height: 1.15;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-green);
+  margin-bottom: var(--space-2);
 `;
 
 const Title = Styled.h3`

@@ -34,7 +34,7 @@ function Footer() {
 }
 
 const FooterBar = Styled.footer`
-  background: var(--color-burgundy);
+  background: var(--panel-burgundy);
   color: var(--color-bone);
   padding: var(--space-6) clamp(1.5rem, 5vw, 4rem);
   display: flex;

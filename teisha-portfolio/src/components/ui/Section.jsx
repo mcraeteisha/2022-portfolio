@@ -4,11 +4,12 @@ import Styled from "styled-components";
 const TONES = {
   paper: "var(--color-bone)",
   alt: "var(--color-sand)",
-  burgundy: "var(--color-burgundy)",
-  green: "var(--color-green)",
+  burgundy: "var(--panel-burgundy)",
+  green: "var(--panel-green)",
+  ink: "var(--panel-ink)",
 };
 
-const DARK_TONES = ["burgundy", "green"];
+const DARK_TONES = ["burgundy", "green", "ink"];
 
 function Section({ id, tone, className, children }) {
   const ref = useRef(null);
@@ -33,19 +34,37 @@ function Section({ id, tone, className, children }) {
   }, []);
 
   return (
-    <Wrapper id={id} $tone={tone} $revealed={revealed} className={className} ref={ref}>
-      {children}
+    <Wrapper id={id} $tone={tone} className={className} ref={ref}>
+      <Reveal $revealed={revealed}>{children}</Reveal>
     </Wrapper>
   );
 }
 
+/* The background lives here and is never animated — fading a section's
+   background in over the body colour reads as a coloured pane being laid
+   on top of the page. Only the contents animate; see Reveal below. */
 const Wrapper = Styled.section`
   padding: var(--space-16) 0;
   background: ${({ $tone }) => TONES[$tone] || TONES.paper};
-  color: ${({ $tone }) => (DARK_TONES.includes($tone) ? "rgba(245, 240, 231, 0.82)" : "inherit")};
+  color: ${({ $tone }) => (DARK_TONES.includes($tone) ? "var(--on-panel-soft)" : "inherit")};
+
+  ${({ $tone }) =>
+    DARK_TONES.includes($tone) &&
+    `
+    h1, h2, h3, h4 { color: var(--on-panel); }
+  `}
+
+  @media (max-width: 640px) {
+    padding: var(--space-10) 0;
+  }
+`;
+
+const Reveal = Styled.div`
+  width: 100%;
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 
   ${({ $revealed }) =>
     $revealed &&
@@ -54,14 +73,10 @@ const Wrapper = Styled.section`
     transform: translateY(0);
   `}
 
-  ${({ $tone }) =>
-    DARK_TONES.includes($tone) &&
-    `
-    h1, h2, h3, h4 { color: var(--color-bone); }
-  `}
-
-  @media (max-width: 640px) {
-    padding: var(--space-10) 0;
+  @media (prefers-reduced-motion: reduce) {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 `;
 

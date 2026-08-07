@@ -24,14 +24,14 @@ const base = css`
 
 export const Button = Styled.a`
   ${base}
-  background: var(--color-burgundy);
-  color: var(--color-bone);
+  background: var(--panel-burgundy);
+  color: var(--on-panel);
   box-shadow: 0 1px 2px rgba(123, 30, 60, 0.15);
 
   &:hover {
-    background: #5A1730;
+    background: var(--panel-burgundy-hover);
     box-shadow: 0 10px 24px -8px rgba(123, 30, 60, 0.45), 0 0 0 1px rgba(228, 96, 126, 0.3);
-    color: var(--color-bone);
+    color: var(--on-panel);
   }
 `;
 
@@ -50,20 +50,20 @@ export const ButtonOutline = Styled.a`
 
 export const ButtonInverse = Styled.a`
   ${base}
-  background: var(--color-bone);
-  color: var(--color-burgundy);
+  background: var(--on-panel);
+  color: var(--panel-burgundy);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 
   &:hover {
     background: #FFFFFF;
-    color: var(--color-burgundy);
+    color: var(--panel-burgundy);
   }
 `;
 
 export const ButtonOutlineInverse = Styled.a`
   ${base}
   background: transparent;
-  color: var(--color-bone);
+  color: var(--on-panel);
   border-color: rgba(245, 240, 231, 0.4);
 
   &:hover {
