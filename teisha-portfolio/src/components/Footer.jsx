@@ -9,7 +9,7 @@ function Footer() {
     <FooterBar>
       <Wordmark src={tmMarkFooter} alt="Teisha McRae" />
       <Copyright>
-        © {year} Teisha McRae. Designed &amp; built with care 🩵
+        © {year} Teisha McRae. Designed &amp; built with care 💕
       </Copyright>
       <SocialRow>
         <a
@@ -35,7 +35,7 @@ function Footer() {
 
 const FooterBar = Styled.footer`
   background: var(--panel-burgundy);
-  color: var(--color-bone);
+  color: var(--on-panel);
   padding: var(--space-6) clamp(1.5rem, 5vw, 4rem);
   display: flex;
   align-items: center;
@@ -53,14 +53,14 @@ const Wordmark = Styled.img`
 const Copyright = Styled.p`
   font-family: var(--font-body);
   font-size: var(--text-xs);
-  color: var(--color-bone);
+  color: var(--on-panel);
 `;
 
 const SocialRow = Styled.div`
   display: flex;
   gap: var(--space-4);
   font-size: 1.1rem;
-  color: var(--color-bone);
+  color: var(--on-panel);
 
   a:hover {
     color: var(--color-rose);

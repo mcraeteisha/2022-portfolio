@@ -163,6 +163,12 @@ const Eyebrow = Styled.p`
 `;
 
 const Panel = Styled.div`
+  /* Content colour follows the panel tone: bone on burgundy, rose on green.
+     Use the fixed --on-panel and --on-panel-accent tokens here, never
+     --color-bone, which inverts to near-black in dark mode. */
+  --panel-text: ${({ $tone }) =>
+    $tone === "green" ? "var(--on-panel-accent)" : "var(--on-panel)"};
+
   background: ${({ $tone }) => ($tone === "green" ? "var(--panel-green)" : "var(--panel-burgundy)")};
   border-radius: var(--radius-lg);
   padding: var(--space-10) clamp(1.5rem, 5vw, var(--space-12));
@@ -170,7 +176,7 @@ const Panel = Styled.div`
   box-shadow: 0 24px 48px -24px rgba(30, 16, 22, 0.35);
 
   h1, h2, h3, h4 {
-    color: var(--color-bone);
+    color: var(--panel-text);
   }
 `;
 
@@ -208,7 +214,7 @@ const StatNumber = Styled.p`
   font-size: clamp(2.75rem, 6vw, 5rem);
   font-weight: 600;
   line-height: 1;
-  color: var(--color-bone);
+  color: var(--panel-text);
   margin-bottom: var(--space-3);
 `;
 
@@ -254,7 +260,7 @@ const Tag = Styled.span`
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--color-bone);
+  color: var(--panel-text);
   background: rgba(245, 240, 231, 0.08);
   border: 1px solid rgba(245, 240, 231, 0.3);
   padding: 0.4rem 0.85rem;
@@ -267,7 +273,7 @@ const CardLink = Styled.a`
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 500;
-  color: var(--color-bone);
+  color: var(--panel-text);
 
   &:hover {
     color: var(--color-rose);

@@ -31,6 +31,10 @@ const GlobalStyle = createGlobalStyle`
   --panel-ink: #1E1016;
   --on-panel: #F5F0E7;
   --on-panel-soft: rgba(245, 240, 231, 0.82);
+  /* Rose for content on the green panels. Fixed, and lighter than
+     --color-rose: the brand rose is only 2.96:1 on the green panel and
+     fails even the large-text threshold. */
+  --on-panel-accent: #F4A0B4;
 
   color-scheme: light;
 

@@ -76,7 +76,7 @@ const Eyebrow = Styled.p`
 
 const Heading = Styled.h2`
   font-size: var(--text-3xl);
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--space-6);
   max-width: 16ch;
 `;
 
