@@ -21,7 +21,7 @@ function NavBar() {
   return (
     <NavStyle $scrolled={scrolled}>
       <Wordmark href="#hero" aria-label="Teisha McRae — back to top">
-        <LogoImg src={tmLogo} alt="Teisha McRae" />
+        <LogoImg aria-hidden="true" />
       </Wordmark>
       <NavLinks>
         {LINKS.map((link) => (
@@ -58,10 +58,17 @@ const Wordmark = Styled.a`
   }
 `;
 
-const LogoImg = Styled.img`
-  height: 1.4rem;
-  width: auto;
+/* The PNG's baked-in burgundy is only 1.9:1 on the dark ground. Using it as
+   a mask lets the colour come from --color-burgundy, which lightens in dark
+   mode (4.98:1). The parent link carries the accessible name, so this
+   element is decorative. Ratio matches the source: 215 x 135. */
+const LogoImg = Styled.span`
   display: block;
+  height: 1.4rem;
+  aspect-ratio: 215 / 135;
+  background-color: var(--color-burgundy);
+  -webkit-mask: url(${tmLogo}) no-repeat center / contain;
+  mask: url(${tmLogo}) no-repeat center / contain;
 `;
 
 const NavLinks = Styled.div`
