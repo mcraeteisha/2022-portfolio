@@ -7,7 +7,7 @@ function Footer() {
 
   return (
     <FooterBar>
-      <Wordmark src={tmMarkFooter} alt="Teisha McRae" />
+      <Wordmark role="img" aria-label="Teisha McRae" />
       <Copyright>
         © {year} Teisha McRae. Designed &amp; built with care 💕
       </Copyright>
@@ -44,10 +44,16 @@ const FooterBar = Styled.footer`
   gap: var(--space-4);
 `;
 
-const Wordmark = Styled.img`
-  height: 30px;
-  width: auto;
+/* The source PNG is still the old pre-rebrand breeze blue, so it is used as
+   a mask rather than an image — the colour comes from --on-panel and stays
+   bone in both themes, matching the footer's always-burgundy ground. */
+const Wordmark = Styled.span`
   display: block;
+  height: 30px;
+  aspect-ratio: 300 / 190;
+  background-color: var(--on-panel);
+  -webkit-mask: url(${tmMarkFooter}) no-repeat center / contain;
+  mask: url(${tmMarkFooter}) no-repeat center / contain;
 `;
 
 const Copyright = Styled.p`
